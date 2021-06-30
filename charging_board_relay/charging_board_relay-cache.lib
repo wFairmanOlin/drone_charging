@@ -96,6 +96,55 @@ X ~ 6 200 -450 200 L 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
+# personal_D_Zener_13V
+#
+DEF personal_D_Zener_13V D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "personal_D_Zener_13V" 0 -100 50 H V C CNN
+F2 "personal:1SMB5928BT3G" -50 550 50 H I C CNN
+F3 "" 0 400 50 H I C CNN
+F4 "1SMB5928BT3GOSCT-ND" -50 350 50 H I C CNN "DPN"
+F5 "1SMB5928BT3G" 0 250 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/1SMB5928BT3G/1SMB5928BT3GOSCT-ND/917730?WT.z_cid=ref_octopart_dkc_buynow&site=us" 400 800 60 H I C CNN "PurchasingLink"
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -100 -50 N
+P 2 0 1 8 -50 50 0 50 N
+P 2 0 1 0 50 0 -50 0 N
+P 3 0 1 8 -50 -50 -50 50 -30 50 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# personal_Fuse_15A_72V
+#
+DEF personal_Fuse_15A_72V F 0 0 N Y 1 F N
+F0 "F" 100 0 50 V V C CNN
+F1 "personal_Fuse_15A_72V" -75 0 50 V V C CNN
+F2 "personal:0697H9200-01" 50 650 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "507-1939-1-ND" 0 750 50 H I C CNN "DPN"
+F5 "0697H9150-02" 0 750 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/en/products/detail/bel-fuse-inc/0697H9200-01/5208767" 0 900 50 H I C CNN "PurchasingLink"
+$FPLIST
+ *Fuse*
+$ENDFPLIST
+DRAW
+S -30 -100 30 100 0 1 10 N
+P 2 0 1 0 0 100 0 -100 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # personal_INA240A4D
 #
 DEF personal_INA240A4D U 0 40 Y Y 1 F N
@@ -108,14 +157,74 @@ F5 "INA240A4D" 50 150 50 H I C CNN "MPN"
 F6 "https://www.digikey.com/en/products/detail/texas-instruments/INA240A4D/8571545" 200 550 50 H I C CNN "Purchasing_Link"
 DRAW
 S -100 50 400 -450 0 1 0 f
-X NC 1 -300 -50 200 R 50 50 1 1 I
-X IN+ 2 -300 -150 200 R 50 50 1 1 I
-X GND 3 -300 -350 200 R 50 50 1 1 I
-X IN- 3 -300 -250 200 R 50 50 1 1 I
-X VS 5 600 -350 200 L 50 50 1 1 I
-X REF2 6 600 -250 200 L 50 50 1 1 I
+X IN- 1 -300 -250 200 R 50 50 1 1 I
+X GND 2 -300 -350 200 R 50 50 1 1 I
+X REF2 3 600 -250 200 L 50 50 1 1 I
+X NC 4 -300 -50 200 R 50 50 1 1 I
+X VOUT 5 600 -50 200 L 50 50 1 1 I
+X VS 6 600 -350 200 L 50 50 1 1 I
 X REF1 7 600 -150 200 L 50 50 1 1 I
-X VOUT 8 600 -50 200 L 50 50 1 1 I
+X IN+ 8 -300 -150 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# personal_LED_GREEN
+#
+DEF personal_LED_GREEN D 0 40 N N 1 F N
+F0 "D" 0 -100 50 H V C CNN
+F1 "personal_LED_GREEN" 0 150 50 H V C CNN
+F2 "LEDs:LED_0603_HandSoldering" 50 -200 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "754-1545-1-ND" 0 -250 50 H I C CNN "DPN"
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 2 0 1 8 50 50 50 -50 N
+P 4 0 1 8 -50 50 -50 -50 50 0 -50 50 N
+P 5 0 1 0 70 30 130 90 100 90 130 90 130 60 N
+P 5 0 1 0 120 30 180 90 150 90 180 90 180 60 N
+X K 1 150 0 100 L 50 50 1 1 P
+X A 2 -150 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# personal_NVS4409NT1G
+#
+DEF personal_NVS4409NT1G Q 0 40 Y Y 1 F N
+F0 "Q" -150 150 50 H V C CNN
+F1 "personal_NVS4409NT1G" 0 500 50 H I C CNN
+F2 "TO_SOT_Packages_SMD:SOT-323_SC-70" 0 950 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.digikey.com/en/products/detail/on-semiconductor/NVS4409NT1G/4848979" 50 850 50 H I C CNN "Purchasing Link"
+F5 "NVS4409NT1GOSCT-ND" -100 650 50 H I C CNN "DPN"
+F6 "NVS4409NT1G" 0 750 50 H I C CNN "MPN"
+DRAW
+C -35 0 110 1 1 10 N
+C 0 -70 10 1 1 0 F
+C 0 70 10 1 1 0 F
+T 0 100 50 50 0 0 0 D Normal 0 C C
+T 0 100 -50 50 0 0 0 S Normal 0 C C
+P 2 1 1 0 -90 0 -200 0 N
+P 2 1 1 10 -90 75 -90 -75 N
+P 2 1 1 10 -70 -50 -70 -90 N
+P 2 1 1 10 -70 20 -70 -20 N
+P 2 1 1 10 -70 90 -70 50 N
+P 2 1 1 0 0 100 0 70 N
+P 3 1 1 0 0 -100 0 0 -70 0 N
+P 4 1 1 0 -70 -70 30 -70 30 70 -70 70 N
+P 4 1 1 0 -60 0 -20 15 -20 -15 -60 0 F
+P 4 1 1 0 10 20 15 15 45 15 50 10 N
+P 4 1 1 0 30 15 15 -10 45 -10 30 15 N
+X ~ 1 -250 0 100 R 50 50 1 1 I
+X ~ 2 0 -200 100 U 50 50 1 1 P
+X ~ 3 0 200 100 D 50 50 1 1 P
+X ~ 1 -300 0 100 R 50 50 1 2 I
+X ~ 2 0 -200 100 U 50 50 1 2 P
+X ~ 3 0 200 100 D 50 50 1 2 P
 ENDDRAW
 ENDDEF
 #
@@ -162,7 +271,7 @@ F0 "R" 0 100 50 H V C CNN
 F1 "personal_R_0001" 0 -100 50 H V C CNN
 F2 "personal:R_1206_P" -50 250 50 H I C CNN
 F3 "" -300 500 50 H I C CNN
-F4 "311-1.0KARCT-ND" 100 350 60 H I C CNN "DPN"
+F4 "2037-RL1632T4F-R001-FNHCT-ND" 100 350 60 H I C CNN "DPN"
 F5 "RL1632T4F-R001-FNH" 0 550 50 H I C CNN "MPN"
 F6 "https://www.digikey.com/en/products/detail/delta-electronics-cyntec/RL1632T4F-R001-FNH/9762304" 500 450 50 H I C CNN "Purchasing_Link"
 $FPLIST
@@ -225,35 +334,14 @@ X ~ 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# personal_R_10K
+# personal_R_120
 #
-DEF personal_R_10K R 0 0 N Y 1 F N
+DEF personal_R_120 R 0 0 N Y 1 F N
 F0 "R" 0 80 50 H V C CNN
-F1 "personal_R_10K" 0 -100 50 H V C CNN
+F1 "personal_R_120" 0 -100 50 H V C CNN
 F2 "personal:R_0805" -800 150 50 H I C CNN
 F3 "" -300 500 50 H I C CNN
-F4 "311-10.0KCRCT-ND" -650 250 60 H I C CNN "DPN"
-F5 "RC0805FR-0710KL" 0 0 50 H I C CNN "MPN"
-$FPLIST
- R_*
- Resistor_*
-$ENDFPLIST
-DRAW
-S 100 -40 -100 40 0 1 10 N
-X ~ 1 -150 0 50 R 50 50 1 1 P
-X ~ 2 150 0 50 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# personal_R_14
-#
-DEF personal_R_14 R 0 0 N Y 1 F N
-F0 "R" 0 80 50 H V C CNN
-F1 "personal_R_14" 0 -100 50 H V C CNN
-F2 "personal:R_0805" 0 300 50 H I C CNN
-F3 "" -300 500 50 H I C CNN
-F4 "RHM14.0AECT-ND" 50 400 60 H I C CNN "DPN"
-F5 "ESR10EZPF14R0" 0 200 50 H I C CNN "MPN"
+F4 "A129738CT-ND" -650 250 60 H I C CNN "DPN"
 $FPLIST
  R_*
  Resistor_*
@@ -272,7 +360,7 @@ F0 "R" 0 0 50 H V C CNN
 F1 "personal_R_150_P" 0 -100 50 H V C CNN
 F2 "TO_SOT_Packages_SMD:TO-263-2" 100 400 50 H I C CNN
 F3 "" -300 500 50 H I C CNN
-F4 "311-10.0CRCT-ND" 250 500 60 H I C CNN "DPN"
+F4 "PWR263S-20-1500JECT-ND" 250 500 60 H I C CNN "DPN"
 F5 "PWR263S-20-1500JE" 200 600 50 H I C CNN "MPN"
 $FPLIST
  R_*
@@ -305,16 +393,15 @@ X ~ 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# personal_R_5K
+# personal_R_51.1
 #
-DEF personal_R_5K R 0 0 N Y 1 F N
+DEF personal_R_51.1 R 0 0 N Y 1 F N
 F0 "R" 0 80 50 H V C CNN
-F1 "personal_R_5K" 0 -100 50 H V C CNN
-F2 "personal:R_0805" -100 250 50 H I C CNN
+F1 "personal_R_51.1" 0 -100 50 H V C CNN
+F2 "personal:R_0805" -800 150 50 H I C CNN
 F3 "" -300 500 50 H I C CNN
-F4 "311-1.0KARCT-ND" 50 350 60 H I C CNN "DPN"
-F5 "RC0805FR-074R99L" 50 150 50 H I C CNN "MPN"
-F6 "https://www.digikey.com/en/products/detail/yageo/RC0805FR-074R99L/727937" 550 450 50 H I C CNN "Purchasing_Link"
+F4 "RMCF0805FT51R1CT-ND" -650 250 60 H I C CNN "DPN"
+F5 "RMCF0805FT51R1" -850 50 50 H I C CNN "MPN"
 $FPLIST
  R_*
  Resistor_*
@@ -326,39 +413,24 @@ X ~ 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# personal_TN2404K-T1-GE3
+# personal_R_5K
 #
-DEF personal_TN2404K-T1-GE3 Q 0 40 Y Y 1 F N
-F0 "Q" -150 150 50 H V C CNN
-F1 "personal_TN2404K-T1-GE3" 0 500 50 H I C CNN
-F2 "personal:SOT-23" 0 950 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-F4 "https://www.digikey.com/en/products/detail/vishay-siliconix/TN2404K-T1-GE3/2623137" 50 850 50 H I C CNN "Purchasing Link"
-F5 "TN2404K-T1-GE3CT-ND" -100 650 50 H I C CNN "DPN"
-F6 "TN2404K-T1-GE3" 0 750 50 H I C CNN "MPN"
+DEF personal_R_5K R 0 0 N Y 1 F N
+F0 "R" 0 80 50 H V C CNN
+F1 "personal_R_5K" 0 -100 50 H V C CNN
+F2 "personal:R_0805" -100 250 50 H I C CNN
+F3 "" -300 500 50 H I C CNN
+F4 "311-4.99CRCT-ND" 50 350 60 H I C CNN "DPN"
+F5 "RC0805FR-074R99L" 50 150 50 H I C CNN "MPN"
+F6 "https://www.digikey.com/en/products/detail/yageo/RC0805FR-074R99L/727937" 550 450 50 H I C CNN "Purchasing_Link"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
 DRAW
-C -35 0 110 1 1 10 N
-C 0 -70 10 1 1 0 F
-C 0 70 10 1 1 0 F
-T 0 100 50 50 0 0 0 D Normal 0 C C
-T 0 100 -50 50 0 0 0 S Normal 0 C C
-P 2 1 1 0 -90 0 -200 0 N
-P 2 1 1 10 -90 75 -90 -75 N
-P 2 1 1 10 -70 -50 -70 -90 N
-P 2 1 1 10 -70 20 -70 -20 N
-P 2 1 1 10 -70 90 -70 50 N
-P 2 1 1 0 0 100 0 70 N
-P 3 1 1 0 0 -100 0 0 -70 0 N
-P 4 1 1 0 -70 -70 30 -70 30 70 -70 70 N
-P 4 1 1 0 -60 0 -20 15 -20 -15 -60 0 F
-P 4 1 1 0 10 20 15 15 45 15 50 10 N
-P 4 1 1 0 30 15 15 -10 45 -10 30 15 N
-X ~ 1 -300 0 100 R 50 50 1 1 I
-X ~ 2 0 -200 100 U 50 50 1 1 P
-X ~ 3 0 200 100 D 50 50 1 1 P
-X ~ 1 -300 0 100 R 50 50 1 2 I
-X ~ 2 0 -200 100 U 50 50 1 2 P
-X ~ 3 0 200 100 D 50 50 1 2 P
+S 100 -40 -100 40 0 1 10 N
+X ~ 1 -150 0 50 R 50 50 1 1 P
+X ~ 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -454,34 +526,6 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# rocketry_D_Zener_13V
-#
-DEF rocketry_D_Zener_13V D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "rocketry_D_Zener_13V" 0 -100 50 H V C CNN
-F2 "footprints:D_13V_Zener" -100 0 50 H I C CNN
-F3 "http://www.onsemi.com/pub/Collateral/1SMB5913BT3-D.PDF" 0 100 50 H I C CNN
-F4 "DK" 200 300 60 H I C CNN "MFN"
-F5 "1SMB5928BT3GOSCT-ND" 100 200 60 H I C CNN "MPN"
-F6 "https://www.digikey.com/product-detail/en/1SMB5928BT3G/1SMB5928BT3GOSCT-ND/917730?WT.z_cid=ref_octopart_dkc_buynow&site=us" 400 500 60 H I C CNN "PurchasingLink"
-$FPLIST
- TO-???*
- *SingleDiode
- *_Diode_*
- *SingleDiode*
- D_*
-$ENDFPLIST
-DRAW
-P 2 0 1 8 -50 -50 -100 -50 N
-P 2 0 1 8 -50 50 0 50 N
-P 2 0 1 0 50 0 -50 0 N
-P 3 0 1 8 -50 -50 -50 50 -30 50 N
-P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
